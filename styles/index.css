@@ -1,0 +1,146 @@
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {}
+
+
+  /* 
+    sm	640px	@media (min-width: 640px) { ... }
+    md	768px	@media (min-width: 768px) { ... }
+    lg	1024px	@media (min-width: 1024px) { ... }
+    xl	1280px	@media (min-width: 1280px) { ... }
+    2xl	1536px	@media (min-width: 1536px) { ... }
+ */
+  .slider {
+      display: flex !important;
+      background: url('../assets/imgs/bg_01.jpg') no-repeat center center;
+  }
+
+  .slider-container {
+      @apply max-w-[1200px];
+      padding: 0 !important;
+  }
+
+  .slider-content {
+      text-align: center;
+      @apply mx-auto;
+      @apply max-w-[92%];
+      @apply sm:max-w-[600px];
+      @apply md:mx-0;
+      @apply md:max-w-[650px];
+  }
+
+
+  .slider-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #8799a3;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+
+  }
+
+  .slider-arrow:hover {
+      cursor: pointer;
+  }
+
+  .left-arrow {
+      left: 25px !important
+  }
+
+  .right-arrow {
+      right: 25px !important;
+  }
+
+  .slick-dots {
+      bottom: 20px !important
+  }
+
+  .slick-dots.custom-dots li {
+      width: 20px;
+      height: 6px;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .slick-dots.custom-dots li.slick-active {
+      background-color: #8799a3;
+  }
+
+  .slick-dots li button:before {
+      display: none;
+  }
+
+  .filter-btn {
+      padding: 1.25rem;
+      border: 3px solid #efefef;
+      overflow: hidden;
+      width: calc((100% / 3) - 0.5rem);
+      @apply flex;
+      @apply flex-col;
+      @apply justify-center;
+      @apply items-center;
+
+      transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  @media screen and (min-width: 768px) {
+      .filter-btn {
+          width: auto;
+          min-width: 120px;
+      }
+  }
+
+
+  .filter-btn:hover {
+      border-color: #2e2e2e;
+      cursor: pointer
+  }
+
+  /***** Product Card *****/
+  .hover-effect .link,
+  .hover-effect .btn,
+  .hover-effect img {
+      transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1)
+  }
+
+  .hover-effect:hover .link {
+      @apply text-main
+  }
+
+  .hover-effect:hover img {
+      opacity: 0.1;
+  }
+
+  .hover-effect .btn {
+      opacity: 0;
+      transform: translateX(50px);
+
+      box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+  }
+
+  .hover-effect .btn:hover {
+      @apply bg-main;
+      @apply text-white
+  }
+
+  .hover-effect:hover .btn {
+      opacity: 1;
+      transform: translateX(0)
+  }
+
+  .hover-effect .btn:nth-of-type(1) {
+      transition-delay: .1s;
+  }
+
+  .hover-effect .btn:nth-of-type(2) {
+      transition-delay: .2s;
+  }
+
+  .hover-effect .btn:nth-of-type(3) {
+      transition-delay: .3s;
+  }
