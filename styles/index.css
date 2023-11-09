@@ -12,6 +12,11 @@
     xl	1280px	@media (min-width: 1280px) { ... }
     2xl	1536px	@media (min-width: 1536px) { ... }
  */
+
+  .transition {
+      transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
   .slider {
       display: flex !important;
       background: url('../assets/imgs/bg_01.jpg') no-repeat center center;
@@ -23,12 +28,8 @@
   }
 
   .slider-content {
-      text-align: center;
-      @apply mx-auto;
-      @apply max-w-[92%];
-      @apply sm:max-w-[600px];
-      @apply md:mx-0;
-      @apply md:max-w-[650px];
+
+      @apply mx-auto max-w-[92%] sm:max-w-[600px] md:mx-0 md:max-w-[650px] text-center md:text-left leading-[1.65];
   }
 
 
@@ -76,16 +77,10 @@
   }
 
   .filter-btn {
-      padding: 1.25rem;
-      border: 3px solid #efefef;
       overflow: hidden;
       width: calc((100% / 3) - 0.5rem);
-      @apply flex;
-      @apply flex-col;
-      @apply justify-center;
-      @apply items-center;
+      @apply flex flex-col justify-center items-center border-[3px] border-solid border-[#efefef] p-[1.25rem] font-poppins text-[18px] font-semibold;
 
-      transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
   @media screen and (min-width: 768px) {
@@ -124,8 +119,7 @@
   }
 
   .hover-effect .btn:hover {
-      @apply bg-main;
-      @apply text-white
+      @apply bg-main text-white
   }
 
   .hover-effect:hover .btn {
@@ -143,4 +137,50 @@
 
   .hover-effect .btn:nth-of-type(3) {
       transition-delay: .3s;
+  }
+
+
+  /* Cart Page */
+  .cart-table th {
+      @apply p-[15px] lg:p-[25px]
+  }
+
+  .remove-btn {
+      @apply w-[45px] h-[45px] text-[#8799a3] bg-[#f5f5f5] rounded-[50%] hover:bg-[#ce0b2b] hover:text-white;
+  }
+
+  .table-price {
+      @apply font-openSans text-[18px] font-[700]
+  }
+
+  .quantity-input {
+      @apply h-[60px] py-[20px] text-center flex items-center justify-center rounded-[45px] flex-grow border-2 border-[#eceef2] border-solid;
+  }
+
+  .input-number {
+      @apply text-[18px] w-[100px] border-none p-0 outline-none font-medium text-center leading-[1] cursor-pointer;
+  }
+
+  .input-number-increment,
+  .input-number-decrement {
+      @apply text-[30px]
+  }
+
+  .details-btn {
+      @apply border-[1px] border-solid border-[#e5e7f5] w-[60px] h-[60px]
+  }
+
+  .details-btn.add-to-cart {
+      @apply h-[60px] bg-[#e52929] text-white w-auto px-[35px] flex items-center justify-center
+  }
+
+
+  /* footer */
+
+  footer .link {
+      @apply text-white hover:text-[#bd896b]
+  }
+
+  footer li:not(:last-child) {
+      @apply mb-[10px];
   }

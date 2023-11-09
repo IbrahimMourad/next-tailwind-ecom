@@ -11,7 +11,7 @@ const Document = () => {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Jost:wght@800&family=Open+Sans:wght@300;400;600;800&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </Head>

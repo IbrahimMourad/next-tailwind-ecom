@@ -1,7 +1,10 @@
-import { useState } from "react";
+"use client";
 import Button from "../ProductsList/components/Button";
 import { useShoppingCart } from "@/context/CartContext";
 import CartItem from "./components/CartItem";
+import Link from "next/link";
+import { formatCurrency } from "@/utils/formatCurrency";
+import { data } from "@/utils/MOCK_DATA1";
 
 const ShoppingCart = () => {
   const {
@@ -13,10 +16,15 @@ const ShoppingCart = () => {
     getItemsQuantity,
   } = useShoppingCart();
 
+  const subtotal = cartItems.reduce((total, cartItem) => {
+    const item = data.find((i) => i.id == cartItem.id);
+    return total + item.price * cartItem.quantity;
+  }, 0);
+  const VAT = subtotal * 0.05;
   return (
     <>
       <Button
-        className="rounded-[50%] w-[65px] h-[65px] bg-[#e9e9e9] text-[#2d2d2d] relative"
+        className=" z-4 rounded-[50%] w-[65px] h-[65px] bg-[#e9e9e9!important] text-[#2d2d2d] relative"
         onClick={openCart}
       >
         <svg
@@ -46,14 +54,16 @@ const ShoppingCart = () => {
             : " transition-all delay-500 opacity-0 translate-x-full")
         }
       >
-        <aside
+        <div
           className={
             " w-screen max-w-lg right-0 absolute bg-white h-full shadow-xl delay-400 duration-500 ease-in-out transition-all transform  " +
             (isOpen ? " translate-x-0 " : " translate-x-full ")
           }
         >
-          <article className="relative w-screen max-w-lg p-10 flex flex-col space-y-6 overflow-y-scroll h-full">
-            <h2 className=" font-bold text-lg">Shopping Cart</h2>
+          <article className="relative w-screen max-w-lg  flex flex-col space-y-6 overflow-y-scroll h-full">
+            <h2 className="px-[30px] mt-[30px] font-bold text-lg">
+              Shopping Cart
+            </h2>
 
             {cartItems?.map((item) => (
               <CartItem
@@ -62,8 +72,42 @@ const ShoppingCart = () => {
                 quantity={getItemsQuantity(item.id)}
               />
             ))}
+            <hr />
+            <ul className="px-[30px]">
+              <li className="flex justify-between mb-[10px]">
+                <span>Subtotal: </span>
+                <span>{formatCurrency(subtotal)}</span>
+              </li>
+              <li className="flex justify-between ">
+                <span>Vat 5%: </span>
+                <span>{formatCurrency(VAT)} </span>
+              </li>
+            </ul>
+            <hr className="w-[calc(100%-60px)] block mx-auto" />
+            <ul className="px-[30px]">
+              <li className="flex justify-between mb-[10px]">
+                <span>Total: </span>
+                <span>{formatCurrency(subtotal + VAT)}</span>
+              </li>
+            </ul>
+            <hr />
+            <div className="px-[30px]">
+              <Link
+                href="/cart"
+                className="uppercase block text-white bg-black text-center text-semibold mb-2 py-3"
+                onClick={closeCart}
+              >
+                view cart
+              </Link>
+              <Link
+                href="#"
+                className="uppercase block text-white bg-black text-center text-semibold py-3"
+              >
+                checkout
+              </Link>
+            </div>
           </article>
-        </aside>
+        </div>
         <section
           className=" w-screen h-full cursor-pointer "
           onClick={closeCart}

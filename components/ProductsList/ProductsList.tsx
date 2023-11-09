@@ -7,10 +7,12 @@ const ProductList = () => {
     <Container className="py-[120px] px-[15px] ">
       <div className=" md:flex md:justify-between md:items-center mb-8 ">
         <div className="wrapper">
-          <p className={`text-main font-roboto`}>
+          <p className={`text-main text-[18px] font-roboto font-normal`}>
             Aliquam lorem ante, dapibus in, viverra
           </p>
-          <h2 className={`md:text-[4.375rem] font-poppins`}>
+          <h2
+            className={`md:text-[4.375rem]  text-[#272727] font-poppins font-bold`}
+          >
             DESIGN FURNITURE
           </h2>
         </div>

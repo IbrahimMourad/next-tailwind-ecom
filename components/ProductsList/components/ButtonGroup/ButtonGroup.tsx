@@ -3,6 +3,7 @@ import Button from "../Button";
 
 import { useShoppingCart } from "@/context/CartContext";
 import { CartItemType, ContextType } from "@/context/CartContext.types";
+import Link from "next/link";
 const ButtonGroup = ({ id }: { id: string }) => {
   const {
     getItemsQuantity,
@@ -12,7 +13,10 @@ const ButtonGroup = ({ id }: { id: string }) => {
   } = useShoppingCart();
   return (
     <div className="btns-group absolute top-[50%] left-[50%] translate-x-[-50%] w-full  flex items-center justify-center gap-2">
-      <Button className="rounded-[50%]">
+      <Link
+        className="w-[50px] h-[50px]  bg-white flex justify-center items-center btn rounded-[50%]"
+        href={`/product/${id}`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -27,7 +31,7 @@ const ButtonGroup = ({ id }: { id: string }) => {
             d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
           />
         </svg>
-      </Button>
+      </Link>
       <Button className="rounded-[50%]">
         <svg
           xmlns="http://www.w3.org/2000/svg"

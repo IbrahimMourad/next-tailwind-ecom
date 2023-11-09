@@ -15,7 +15,9 @@ module.exports = {
     extend: {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
+        jost: ["Jost", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        openSans: ['"Open Sans"', "sans-serif"],
       },
 
       colors: {

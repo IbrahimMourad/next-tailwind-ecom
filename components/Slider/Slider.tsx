@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import Container from "../Container";
+import Button from "../ProductsList/components/Button";
 
 function Arrow(props) {
   let className =
@@ -59,21 +60,24 @@ const settings = {
 
 const SliderSlick = () => {
   return (
-    <Slider className="font-poppins pt-[95px] " {...settings}>
+    <Slider className="font-poppins pt-[121px] " {...settings}>
       <div className="slider  items-center justify-center min-h-[600px] md:min-h-[825px]">
         <Container className="slider-container">
-          <div className="slider-content ">
-            <h4 className="font-bold md:text-2x mb-3">
+          <div className="slider-content">
+            <h4 className="font-bold md:text-2xl mb-[10px]">
               30 % OFF ALL ORDER Living Room
             </h4>
-            <h3 className="font-bold text-[40px] md:text-[84px] mb-3">
+            <h3 className="font-bold text-[40px] md:text-[84px] mb-[10px]">
               Sofa Collection
             </h3>
-            <p className="text-[15px]">
+            <p className="text-[18px] mb-[30px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation
             </p>
+            <Button className="px-[50px] py-[10px] w-[auto!important] h-[60px!important] text-[15px] text-white bg-[#bd896b!important] font-medium uppercase">
+              shop now
+            </Button>
           </div>
         </Container>
       </div>

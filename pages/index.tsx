@@ -8,6 +8,7 @@ const IndexPage = () => {
   return (
     <Layout title="Home | Next.js + TypeScript Example">
       <SliderSlick />
+
       <ProductList />
     </Layout>
   );
