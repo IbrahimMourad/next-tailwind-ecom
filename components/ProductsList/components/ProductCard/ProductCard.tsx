@@ -26,7 +26,7 @@ const ProductCard = ({
   rating,
 }: ProductCardProps) => {
   return (
-    <div className="relative flex w-full md:w-[25%] flex-col overflow-hidden p-[1.563rem] border border-gray-100 bg-white shadow-md font-poppins hover-effect">
+    <div className="relative flex items-center justify-between w-full md:w-[33.33%] xl:w-[25%] flex-col overflow-hidden p-[1.563rem] border border-gray-100 bg-white shadow-md font-poppins hover-effect">
       <div className="flex justify-between  w-full px-3">
         <ReactStars
           count={5}
@@ -42,7 +42,7 @@ const ProductCard = ({
           </div>
         )}
       </div>
-      <div className="flex items-center justify-center min-h-[350px] relative p-4 py-6 ">
+      <div className="flex items-center justify-center min-h-[300px] p-[10px] md:p-0 md:min-h-[350px] relative ">
         <img
           src={imgUrl}
           alt=" product"
@@ -55,7 +55,7 @@ const ProductCard = ({
       <div>
         <Link
           href={`/product/${id}`}
-          className="link text-black   text-center block font-semibold	text-[1.375rem] mb-[1.25rem] "
+          className="link text-black text-center block font-semibold	text-[1.375rem] mb-[10px]"
         >
           {name}
         </Link>

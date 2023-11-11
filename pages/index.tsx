@@ -6,7 +6,7 @@ import SliderSlick from "@/components/Slider/Slider";
 
 const IndexPage = () => {
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
+    <Layout title="Home |">
       <SliderSlick />
 
       <ProductList />

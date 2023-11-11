@@ -4,7 +4,7 @@ import CartTotalCard from "@/components/Table/components/CartTotalCard";
 
 const AboutPage = () => {
   return (
-    <Layout>
+    <Layout title="Cart |">
       <div className="container px-[15px] mx-auto max-w-[1200px]">
         <Table />
         <hr />

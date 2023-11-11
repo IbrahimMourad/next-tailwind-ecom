@@ -38,10 +38,9 @@ const CartTotalCard = () => {
           </li>
         </ul>
         <div className="px-[15px] md:px-[35px]">
-          {" "}
           <Link
             href="#"
-            className=" block font-bold uppercase text-center text-white bg-[#39b54a] px-[35px] py-[10px] "
+            className="block font-bold uppercase text-center text-white bg-[#39b54a] px-[35px] py-[10px] text-[12px] "
           >
             Proceed to checkout
           </Link>

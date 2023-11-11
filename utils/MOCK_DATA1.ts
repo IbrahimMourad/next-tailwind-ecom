@@ -1,77 +1,70 @@
-import img07 from "@/assets/imgs/img_07.jpg";
+import img03 from "@/assets/imgs/img_03.png";
+import img04 from "@/assets/imgs/img_04.png";
+import img05 from "@/assets/imgs/img_05.png";
+import img06 from "@/assets/imgs/img_06.png";
+import img07 from "@/assets/imgs/img_07.png";
+import img08 from "@/assets/imgs/img_08.png";
+import img10 from "@/assets/imgs/img_10.png";
+
 export const data = [
   {
     id: "9895a0c3-8118-4b4d-8e2b-0e5e72790708",
-    name: "Honorable",
+    name: "Lightbulb",
     rating: 2.5,
-    price: 1471,
-    oldPrice: 1909,
+    price: 50,
+    oldPrice: 70,
     imgUrl: img07.src,
   },
   {
     id: "56d5d3d8-0229-4f8c-a3e7-f004e4c0967e",
-    name: "Mr",
+    name: "Lightbulb",
     rating: 4,
-    price: 1516,
-    imgUrl: "http://dummyimage.com/153x100.png/cc0000/ffffff",
+    price: 125,
+    imgUrl: img04.src,
   },
   {
     id: "892d3357-4dd3-4eae-bf37-61d4e0165715",
-    name: "Dr",
+    name: "Wood chair",
     rating: 3.5,
-    price: 4506,
-    oldPrice: 5295,
-    imgUrl: "http://dummyimage.com/124x100.png/cc0000/ffffff",
+    price: 140,
+    oldPrice: 190,
+    imgUrl: img05.src,
   },
   {
     id: "2ae5158b-20aa-43cd-a34f-6c48a0d9ac8d",
-    name: "Rev",
+    name: "Vase",
     rating: 5,
-    price: 4891,
-    oldPrice: 5000,
-    imgUrl: "http://dummyimage.com/213x100.png/cc0000/ffffff",
+    price: 88,
+    oldPrice: 112,
+    imgUrl: img06.src,
   },
   {
     id: "4a2922de-a65c-4409-bb72-998cb019a0ba",
-    name: "Honorable",
+    name: "Wood chair",
     rating: 5,
-    price: 3709,
-    oldPrice: 4709,
-    imgUrl: img07.src,
+    price: 159,
+    oldPrice: 129,
+    imgUrl: img08.src,
   },
   {
     id: "acd09b99-8d5d-422f-a508-2f1d4ae8f263",
-    name: "Ms",
+    name: "Bathroom lighting",
     rating: 5,
-    price: 3218,
-    imgUrl: "http://dummyimage.com/244x100.png/5fa2dd/ffffff",
+    price: 100,
+    imgUrl: img03.src,
   },
   {
     id: "d729bef7-75cb-411e-bc70-22962b06d5ab",
-    name: "Ms",
+    name: "Bathroom lighting",
     rating: 5,
     price: 794,
-    imgUrl: "http://dummyimage.com/204x100.png/dddddd/000000",
+    imgUrl: img10.src,
   },
   {
     id: "833dbe91-ceb7-4203-a43e-25716e4dd1ca",
-    name: "Rev",
+    name: "Wood chair",
     rating: 0,
-    price: 3401,
-    imgUrl: "http://dummyimage.com/108x100.png/ff4444/ffffff",
-  },
-  {
-    id: "33ae99be-513e-4ebf-93a5-ea82b36380f7",
-    name: "Mr",
-    rating: 1,
-    price: 4278,
-    imgUrl: "http://dummyimage.com/231x100.png/5fa2dd/ffffff",
-  },
-  {
-    id: "3694ac20-78f2-4fc9-9a04-402eb35fd0fd",
-    name: "Dr",
-    rating: 2.5,
-    price: 2846,
-    imgUrl: "http://dummyimage.com/131x100.png/cc0000/ffffff",
+    price: 150,
+    imgUrl: img05.src,
   },
 ];

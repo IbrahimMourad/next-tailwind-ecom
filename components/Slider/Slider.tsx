@@ -1,12 +1,11 @@
 import Slider from "react-slick";
-import Container from "../Container";
-import Button from "../ProductsList/components/Button";
+import SlideItem from "./Slide";
 
 function Arrow(props) {
   let className =
     props.type === "next"
-      ? "slider-arrow right-arrow"
-      : "slider-arrow left-arrow ";
+      ? "slider-arrow right-arrow right-[15px!important] md:right-[25px!important] xl:right-[80px!important] 2xl:right-[90px!important]"
+      : "slider-arrow left-arrow left-[15px!important] md:left-[25px!important] xl:left-[80px!important] 2xl:left-[90px!important]";
   className += " arrow";
   const char =
     props.type === "next" ? (
@@ -49,7 +48,10 @@ function Arrow(props) {
 
 const settings = {
   dots: true,
-  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 8000,
+
+  fade: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   nextArrow: <Arrow type="next" />,
@@ -60,59 +62,10 @@ const settings = {
 
 const SliderSlick = () => {
   return (
-    <Slider className="font-poppins pt-[121px] " {...settings}>
-      <div className="slider  items-center justify-center min-h-[600px] md:min-h-[825px]">
-        <Container className="slider-container">
-          <div className="slider-content">
-            <h4 className="font-bold md:text-2xl mb-[10px]">
-              30 % OFF ALL ORDER Living Room
-            </h4>
-            <h3 className="font-bold text-[40px] md:text-[84px] mb-[10px]">
-              Sofa Collection
-            </h3>
-            <p className="text-[18px] mb-[30px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation
-            </p>
-            <Button className="px-[50px] py-[10px] w-[auto!important] h-[60px!important] text-[15px] text-white bg-[#bd896b!important] font-medium uppercase">
-              shop now
-            </Button>
-          </div>
-        </Container>
-      </div>
-
-      <div className="slider  items-center justify-center min-h-[825px]">
-        <Container>
-          <div className="slider-content">
-            <h4 className="font-bold text-2x mb-3">
-              30 % OFF ALL ORDER Living Room
-            </h4>
-            <h3 className="font-bold text-[84px] mb-3">Sofa Collection</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation
-            </p>
-          </div>
-        </Container>
-      </div>
-
-      <div className="slider  items-center justify-center min-h-[825px]">
-        <Container>
-          <div className="slider-content">
-            <h4 className="font-bold text-2x mb-3">
-              30 % OFF ALL ORDER Living Room
-            </h4>
-            <h3 className="font-bold text-[84px] mb-3">Sofa Collection</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation
-            </p>
-          </div>
-        </Container>
-      </div>
+    <Slider className="font-poppins " {...settings}>
+      <SlideItem />
+      <SlideItem />
+      <SlideItem />
     </Slider>
   );
 };

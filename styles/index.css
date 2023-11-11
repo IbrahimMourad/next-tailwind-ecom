@@ -2,7 +2,20 @@
   @tailwind components;
   @tailwind utilities;
 
-  @layer base {}
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      line-height: 1.2;
+  }
 
 
   /* 
@@ -24,12 +37,12 @@
 
   .slider-container {
       @apply max-w-[1200px];
-      padding: 0 !important;
+
   }
 
   .slider-content {
 
-      @apply mx-auto max-w-[92%] sm:max-w-[600px] md:mx-0 md:max-w-[650px] text-center md:text-left leading-[1.65];
+      @apply mx-auto pc:max-w-[650px] lg:-mx-0 text-center lg:text-left leading-[1.65];
   }
 
 
@@ -49,13 +62,7 @@
       cursor: pointer;
   }
 
-  .left-arrow {
-      left: 25px !important
-  }
 
-  .right-arrow {
-      right: 25px !important;
-  }
 
   .slick-dots {
       bottom: 20px !important
@@ -79,7 +86,7 @@
   .filter-btn {
       overflow: hidden;
       width: calc((100% / 3) - 0.5rem);
-      @apply flex flex-col justify-center items-center border-[3px] border-solid border-[#efefef] p-[1.25rem] font-poppins text-[18px] font-semibold;
+      @apply cursor-pointer flex flex-col justify-center items-center border-[3px] border-solid border-[#efefef] p-[15px] font-poppins text-[15px] xl:text-[18px] font-semibold;
 
   }
 
@@ -93,7 +100,6 @@
 
   .filter-btn:hover {
       border-color: #2e2e2e;
-      cursor: pointer
   }
 
   /***** Product Card *****/
@@ -142,11 +148,11 @@
 
   /* Cart Page */
   .cart-table th {
-      @apply p-[15px] lg:p-[25px]
+      @apply p-[15px] lg:p-[25px] text-[15px] md:text-[16px]
   }
 
   .remove-btn {
-      @apply w-[45px] h-[45px] text-[#8799a3] bg-[#f5f5f5] rounded-[50%] hover:bg-[#ce0b2b] hover:text-white;
+      @apply w-[35px] h-[35px] md:w-[45px] md:h-[45px] text-[#8799a3] bg-[#f5f5f5] rounded-[50%] hover:bg-[#ce0b2b] hover:text-white;
   }
 
   .table-price {
@@ -167,11 +173,11 @@
   }
 
   .details-btn {
-      @apply border-[1px] border-solid border-[#e5e7f5] w-[60px] h-[60px]
+      @apply border-[1px] border-solid border-[#e5e7f5] w-[60px] h-[60px] flex justify-center items-center hover:text-white hover:bg-[#ce0b2b] hover:border-[#ce0b2b]
   }
 
   .details-btn.add-to-cart {
-      @apply h-[60px] bg-[#e52929] text-white w-auto px-[35px] flex items-center justify-center
+      @apply h-[60px] bg-[#e52929] border-[#e52929] text-white w-auto px-[35px] flex items-center justify-center hover:bg-[#ce0b2b]
   }
 
 
@@ -184,3 +190,65 @@
   footer li:not(:last-child) {
       @apply mb-[10px];
   }
+
+
+  /** Text Animation **/
+
+  @-webkit-keyframes fadeInUpSD {
+      0% {
+          opacity: 0;
+          -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+      }
+
+      100% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+      }
+  }
+
+  @keyframes fadeInUpSD {
+      0% {
+          opacity: 0;
+          -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+      }
+
+      100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+      }
+
+  }
+
+  .fadeInUpSD {
+      -webkit-animation-name: fadeInUpSD;
+      animation-name: fadeInUpSD;
+  }
+
+
+
+  .slick-active p,
+  .slick-active h4,
+  .slick-active h3 {
+      animation-name: fadeInUpSD;
+      animation-duration: 1.25s;
+      opacity: 1;
+      overflow: hidden;
+  }
+
+  .slick-active h4 {
+      animation-delay: 0.4s;
+  }
+
+  .slick-active h3 {
+      animation-delay: 0.6s;
+  }
+
+  .slick-active p {
+      animation-delay: 0.8s;
+  }
+
+  /* Text Animation End **/

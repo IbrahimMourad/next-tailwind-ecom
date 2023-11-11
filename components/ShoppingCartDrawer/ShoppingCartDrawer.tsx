@@ -24,7 +24,7 @@ const ShoppingCart = () => {
   return (
     <>
       <Button
-        className=" z-4 rounded-[50%] w-[65px] h-[65px] bg-[#e9e9e9!important] text-[#2d2d2d] relative"
+        className=" z-4 rounded-[50%] w-[30px] h-[30px] md:w-[50px] md:h-[50px] lg:w-[65px] lg:h-[65px] bg-[#e9e9e9!important] text-[#2d2d2d] relative"
         onClick={openCart}
       >
         <svg
@@ -33,7 +33,7 @@ const ShoppingCart = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6"
+          className="w-3 h-3 md:w-5 md:h-5 lg:w-6 lg:h-6"
         >
           <path
             strokeLinecap="round"
@@ -41,7 +41,7 @@ const ShoppingCart = () => {
             d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
           />
         </svg>
-        <span className="text-white bg-[#da0a2c] absolute -right-[8px] -top-[5px] rounded-[50%] w-[25px] h-[25px]">
+        <span className="flex items-center justify-center rounded-[50%] bg-[#da0a2c] text-white text-[12px] md:text-[14px] absolute -right-[8px] -top-[5px] w-[15px] h-[15px] md:w-[20px]  md:-h-[20px] lg:w-[25px] lg:h-[25px]">
           {cartQuantity}
         </span>
       </Button>

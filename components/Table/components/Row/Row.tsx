@@ -33,8 +33,8 @@ const Row = ({ id }) => {
           />
         </div>
         <div className="flex flex-col">
-          <h4 className="font-jost font-bold">{item.name}</h4>
-          <span className="text-[#0684ff]">Clothes</span>
+          <h4 className="font-jost font-bold  md:text-[16px]">{item.name}</h4>
+          <span className="text-[#0684ff] text-[13px]">Clothes</span>
         </div>
       </td>
       <td className="p-4">
@@ -45,7 +45,7 @@ const Row = ({ id }) => {
       <td className="p-4 flex justify-center">
         <div className="quantity-input ">
           <button
-            className="input-number-decrement"
+            className="input-number-decrement text-[#ced9df]"
             onClick={() => decreaseQuantity(id)}
           >
             –
@@ -57,7 +57,7 @@ const Row = ({ id }) => {
             readOnly={true}
           />
           <button
-            className="input-number-increment"
+            className="input-number-increment text-[#ced9df]"
             onClick={() => increaseQuantity(id)}
           >
             +

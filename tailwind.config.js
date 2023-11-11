@@ -13,6 +13,9 @@ module.exports = {
       slider: "url('/assets/imgs/bg_01.jpg')",
     },
     extend: {
+      screens: {
+        pc: "991px",
+      },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
         jost: ["Jost", "sans-serif"],
